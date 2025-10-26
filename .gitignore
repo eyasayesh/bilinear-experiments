@@ -1,3 +1,7 @@
+bash_scripts/*
+jobreports/*
+data/*
+wandb/*
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
