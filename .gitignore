@@ -2,6 +2,7 @@ bash_scripts/*
 jobreports/*
 data/*
 wandb/*
+checkpoints/*
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
