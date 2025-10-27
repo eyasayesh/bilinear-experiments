@@ -100,7 +100,7 @@ class BilinearClassifier(nn.Module):
         eigenvalues, eigenvectors = np.linalg.eigh(Q_np)
         
         # Sort by absolute magnitude (most important)
-        sorted_idx = np.argsort(np.abs(eigenvalues))[::-1]
+        sorted_idx = np.argsort(eigenvalues)[::-1]
         eigenvalues = eigenvalues[sorted_idx]
         eigenvectors = eigenvectors[:, sorted_idx]
         
@@ -114,7 +114,7 @@ class BilinearClassifier(nn.Module):
         
         return {
             'digit': digit,
-            'Q': Q_np,
+            'interaction_matrix': Q_np,
             'eigenvalues': eigenvalues,
             'eigenvectors': eigenvectors,
             'num_positive': len(pos_eigs),
